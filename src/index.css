@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* YonMan Primer Light — 取自 Figma 设计稿 */
+    --background: 0 0% 100%;
+    --foreground: 210 13% 13%;          /* #1F2328 */
+    --card: 0 0% 100%;
+    --card-foreground: 210 13% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 13% 13%;
+    --primary: 210 13% 14%;             /* #1F2329 主按钮 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 17% 96%;           /* #F6F8FA */
+    --secondary-foreground: 210 13% 13%;
+    --muted: 210 17% 96%;
+    --muted-foreground: 213 9% 38%;   /* #59636E */
+    --accent: 210 17% 96%;
+    --accent-foreground: 210 13% 13%;
+    --destructive: 356 70% 47%;         /* #CF222E */
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 13% 82%;              /* #D1D9E0 */
+    --input: 214 13% 82%;
+    --ring: 212 92% 42%;                /* #0969DA */
+    --radius: 0.5rem;
+
+    /* 扩展令牌 */
+    --ym-accent: 212 92% 42%;           /* #0969DA 链接/选中 */
+    --ym-selected: 199 100% 93%;        /* #DDF4FF 选中项背景 */
+    --ym-hover: 210 17% 96%;            /* #F6F8FA */
+    --ym-danger-hover: 356 70% 45%;
+    --ym-tab-active: 13 97% 72%;        /* #FD8C73 激活tab下划线 */
+    --ym-badge-bg: 210 17% 96%;
+    --ym-badge-text: 37 90% 31%;        /* #9A6700 环境badge */
+    --ym-sidebar-bg: 210 17% 96%;
+    --ym-border-strong: 214 13% 82%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Noto Sans SC", "Inter", -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .ym-focus {
+    @apply focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/30 focus-visible:border-ring;
+  }
+  .ym-scrollbar::-webkit-scrollbar { width: 8px; height: 8px; }
+  .ym-scrollbar::-webkit-scrollbar-thumb { background: #d1d9e0; border-radius: 4px; }
+  .ym-scrollbar::-webkit-scrollbar-thumb:hover { background: #b7c0cc; }
+  .ym-scrollbar::-webkit-scrollbar-track { background: transparent; }
+}
